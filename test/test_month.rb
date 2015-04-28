@@ -38,8 +38,10 @@ Su Mo Tu We Th Fr Sa
 EOS
     assert_equal expected, m.to_s
   end
-
-  def test_to_s_on_feb_2015
+##############################################
+######## Month that starts on sunday #########
+##############################################
+  def test_to_s_on_march_2015
     m = Month.new(3, 2015)
     expected = <<EOS
     March 2015
@@ -53,4 +55,5 @@ Su Mo Tu We Th Fr Sa
 EOS
     assert_equal expected, m.to_s
   end
+
 end
