@@ -19,7 +19,7 @@ class Month
 
 
   def to_s
-    weekdays = "Su Mo Tu We Th Fr Sa" <<"\n"
+    weekdays = "Su Mo Tu We Th Fr Sa" << "\n"
     month    = "#{month_names} #{year}"
 
     output   =[
@@ -27,7 +27,7 @@ class Month
       weekdays
       ].join("\n")
       (1..length).each_slice(7) do |week|
-      output << week.join
+      output << week.map { |day| day.to_s.rjust(3) }.join[1..-1]
       output << "\n"
     end
     output
