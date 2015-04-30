@@ -44,7 +44,7 @@ EOS
   def test_to_s_on_march_2015
     m = Month.new(3, 2015)
     expected = <<EOS
-    March 2015
+     March 2015
 Su Mo Tu We Th Fr Sa
  1  2  3  4  5  6  7
  8  9 10 11 12 13 14
@@ -56,4 +56,24 @@ EOS
     assert_equal expected, m.to_s
   end
 
+  def test_zellers_month_on_wed
+    m = Month.new(4, 2015)
+    expected = 4
+
+    assert_equal expected, m.zellers
+  end
+
+  def test_zellers_month_on_friday
+    m = Month.new(5, 2015)
+    expected = 6
+
+    assert_equal expected, m.zellers
+  end
+
+  def test_zellers_month_on_wed
+    m = Month.new(6, 2015)
+    expected = 6
+
+    assert_equal expected, m.zellers
+  end
 end
