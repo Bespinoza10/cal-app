@@ -21,23 +21,24 @@ class Month
   def to_s
     weekdays = "Su Mo Tu We Th Fr Sa" << "\n"
     month    = "#{month_names} #{year}"
-    self.zellers =
-      space == " "
-      if zellers = 0
-        space * 6
-      elsif zellers = 1
-        space * 0
-      elsif zellers = 2
-        space * 1
-      elsif zellers = 3
-        space * 2
-      elsif zellers = 4
-        space * 3
-      elsif zellers = 5
-        space * 4
-      elsif zellers = 6
-        space * 5
-      end
+#     space = " "
+#     self.zellers
+#       if zellers = 0
+#         space * 6
+#
+#       elsif zellers == 1
+#         space * 0
+#       elsif zellers = 2
+#         space * 1
+#       elsif zellers = 3
+#         space * 2
+#       elsif zellers = 4
+#         space * 3
+#       elsif zellers = 5
+#         space * 4
+#       elsif zellers = 6
+#         space * 5
+#       end
     output   =[
       month.center(weekdays.size).rstrip,
       weekdays
